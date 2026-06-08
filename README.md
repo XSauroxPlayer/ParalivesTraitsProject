@@ -1,25 +1,38 @@
-**Creator:** xSauroXplayer | **Game:** Paralives
+# Traits
 
-## Overview
+A BepInEx mod for Paralives that adds a personality-traits system to the game.
 
-The Traits Project is a BepInEx framework mod for Paralives that introduces a fully functional trait system. It adds a trait selection panel to character creation, loads trait definitions from JSON files, and persists trait data across save files. It also exposes a public API so that other mods can read which traits a character has and build gameplay effects on top of them.
+**Creator:** xSauroXplayer
 
-## Setup Requirements
+## What it does
 
-Install BepInEx 5 (x64) for Paralives and launch the game once to generate the necessary folders. Then place the `ParalivesTraitsProject` folder inside `BepInEx/plugins/`. The folder must contain the `ParalivesTraitsProject.dll` file along with the `Resources` folder holding the `json` and `images` subfolders. Launch the game — the trait panel will appear automatically in character creation.
+Adds a trait selection panel to character creation. You pick traits for your Parafolk, and they save with your game. Other mods can read a character's traits through a small public API and build gameplay on top of them.
 
-## Key Features
+## Install
 
-- Trait selection panel integrated into the character creation screen
-- Configurable maximum number of traits per character and per life stage
-- Trait definitions loaded from a JSON file — no recompilation needed to add new traits
-- Trait icons loaded from image files alongside the JSON
-- Trait data saved and restored with each save file
-- Public API for other mods to query which traits a character currently has
+1. Install BepInEx 5 (x64) for Paralives and run the game once so it creates the BepInEx folders.
+2. Put `ParalivesTraitsProject.dll` in `BepInEx/plugins/`.
+3. Start the game. The trait panel shows up in character creation on its own.
 
-## For Mod Authors
+That is the whole install: one file. The traits and all icons are built into the DLL.
 
-Other mods can declare a dependency on this mod and use the public API to read character traits at runtime:
+## Customizing traits
+
+The first time you run the mod it creates a `BepInEx/plugins/ParalivesTraitsProject/Resources/` folder with `traits.json`, an `images/` folder, and a short README that explains the format. Edit those files to add traits, remove them, or change icons, then restart the game. If you delete a file by accident, the mod falls back to its built-in copy, so nothing breaks. To reset everything, delete the folder and restart.
+
+## Features
+
+- Trait selection panel in the character creation screen
+- A cap on traits per character and per life stage
+- Traits defined in a JSON file, so you can add your own without rebuilding the mod
+- Custom trait icons from image files
+- Traits saved and restored with each save file
+- Trait data kept in its own file, so it never touches your game saves
+- A public API other mods can use to read a character's traits
+
+## For mod authors
+
+Declare a dependency and read a character's traits at runtime:
 
 ```csharp
 [BepInDependency("com.xsauroxplayer.paratraits")]
@@ -30,8 +43,8 @@ var traits = TraitsManager.GetTraits(character.GUID.ToString());
 bool hasTrait = traits.Any(t => t.Definition.id == "your_trait_id");
 ```
 
-Trait IDs match the `id` field in the `traits.json` file. The API is safe to call every frame — trait lookups are dictionary-based.
+Trait IDs match the `id` field in `traits.json`. Lookups are dictionary-based, so the API is cheap to call often.
 
-## Usage Restrictions
+## License
 
-Redistribution, inclusion in mod compilations, and derivative use require explicit permission and proper attribution to the original creator.
+MIT. See [LICENSE](LICENSE).
