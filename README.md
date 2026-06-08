@@ -4,6 +4,8 @@ A BepInEx mod for Paralives that adds a personality-traits system to the game.
 
 **Creator:** xSauroXplayer
 
+**Available in [6ix's Plugin Hub](https://github.com/6xvl/paralives-plugins-index).** Install it from inside the game with one click, and it stays up to date on its own.
+
 ## What it does
 
 Adds a trait selection panel to character creation. You pick traits for your Parafolk, and they save with your game. Other mods can read a character's traits through a small public API and build gameplay on top of them.
