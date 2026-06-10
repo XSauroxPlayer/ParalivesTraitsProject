@@ -14,7 +14,7 @@ Adds a trait selection panel to character creation. You pick traits for your Par
 
 1. Install BepInEx 5 (x64) for Paralives and run the game once so it creates the BepInEx folders.
 2. Put `ParalivesTraitsProject.dll` in `BepInEx/plugins/`.
-3. Start the game. The trait panel shows up in character creation on its own.
+3. Start the game. The trait section shows up in character profile on its own.
 
 That is the whole install: one file. The traits and all icons are built into the DLL.
 
