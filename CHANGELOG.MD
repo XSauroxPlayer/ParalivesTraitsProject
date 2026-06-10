@@ -1,16 +1,76 @@
 # Changelog
 
-## 1.0.0
+All notable changes to this project will be documented in this file.
 
-First public release. Everything here is new.
+## [1.1.2] - Latest
 
-### What's in it
+### Added
 
-- A trait selection panel built into the character creation screen, next to the profile UI.
-- Traits come from a JSON file, so you can add or change them without touching any code.
-- Each trait can have its own icon, loaded from an image in the Resources folder.
-- Hover a trait in the list to see its name and description in a tooltip.
-- A cap on how many traits a character can have, with per-life-stage limits you can set in a small settings panel.
-- A Randomize button that fills in a valid set of traits for the current character.
-- Traits save with your game and come back on load, including after you delete a save.
-- A public API: any BepInEx mod can depend on this one and read a character's traits at runtime with `TraitsManager.GetTraits()`.
+#### Good Trait Effects
+- Parafolk with the **Good** trait gain **+2 Happy** while the emotion is active.
+- Parafolk with the **Good** trait gain **+1 Happy** when nearby Parafolk have a positive dominant emotion.
+- Parafolk with the **Good** trait do not suffer job performance penalties from negative emotions.
+
+#### Evil Trait Effects
+- Parafolk with the **Evil** trait gain **+2 Angry** while the emotion is active.
+- Parafolk with the **Evil** trait gain **+1 Happy** when nearby Parafolk have a negative dominant emotion.
+- Parafolk with the **Evil** trait convert the job performance penalty from **Angry** into a bonus while Angry is their dominant emotion.
+
+---
+
+## [1.1.1]
+
+### Added
+- Implemented the **Goofball** trait effect.
+
+---
+
+## [1.1.0]
+
+### Breaking Changes
+- Trait effects are now bundled directly into the main mod.
+- The separate effects DLL is no longer required and must be removed.
+
+### Added
+- Search bar in the trait selection UI.
+- Trait list is now sorted alphabetically by the localized trait name.
+
+### Changed
+
+#### UI
+- The Traits section in the character profile is now displayed below the Personality section.
+- Trait list ordering now uses the localized trait name instead of the raw English name.
+- Trait search now matches against the localized trait name instead of the raw English name.
+
+#### Localization
+- Added name and description entries for all **534 traits** across all **8 supported languages**:
+  - English (en)
+  - Italian (it)
+  - German (de)
+  - Spanish (es)
+  - French (fr)
+  - Portuguese (pt)
+  - Polish (pl)
+  - Chinese (zh)
+- Non-English languages currently use English as a placeholder for newly added entries pending translation.
+- Trait descriptions now replace `(Parafolk name)` with the character's actual name.
+
+#### Traits
+- Disabled **470 traits** that currently have no implemented effect, preventing them from appearing in the trait selection UI.
+- **51 traits** with active gameplay effects remain available.
+
+---
+
+## [1.0.0]
+
+First public release.
+
+### Added
+- Trait selection panel integrated into the character creation screen next to the profile UI.
+- Traits loaded from a JSON file, allowing customization without code changes.
+- Support for custom trait icons loaded from the Resources folder.
+- Tooltip displaying trait name and description when hovering over a trait.
+- Configurable limit on the number of traits a character can have, including per-life-stage restrictions.
+- Randomize button that generates a valid set of traits for the current character.
+- Full save/load support for traits.
+- Public API for other BepInEx mods to access character traits at runtime via `TraitsManager.GetTraits()`.
