@@ -2,7 +2,7 @@
 
 A BepInEx mod for Paralives that adds a personality-traits system to the game.
 
-**Creator:** xSauroXplayer
+**Creator:** XSauroxPlayer
 
 **Available in [6ix's Plugin Hub](https://github.com/6xvl/paralives-plugins-index).** Install it from inside the game with one click, and it stays up to date on its own.
 
