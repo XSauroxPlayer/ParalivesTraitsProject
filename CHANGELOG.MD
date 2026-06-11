@@ -2,7 +2,21 @@
 
 All notable changes to this project will be documented in this file.
 
-## [1.1.3] - Latest
+## [1.1.4] - Latest
+
+### Added
+
+- disabled duplicate entries for enabled traits
+
+#### Ambitious Trait Effects
+- Parafolk with the **Ambitious** trait gain **+2 Inspired** while actively at work.
+- Parafolk with the **Ambitious** trait suffer **+1 Stressed** when away from work with low job performance (< 50).
+- Parafolk with the **Ambitious** trait receive a **50% job performance boost** when Inspired is their dominant emotion at work.
+
+
+---
+
+## [1.1.3]
 
 ### Added
 
