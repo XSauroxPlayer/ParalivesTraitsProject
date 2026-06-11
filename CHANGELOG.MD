@@ -2,7 +2,81 @@
 
 All notable changes to this project will be documented in this file.
 
-## [1.1.6] - Latest
+## [1.1.7] - Latest
+
+### Changed
+- All three UI panels (Traits, Config, Randomize) now have a resize handle in the bottom-right corner — drag it to scale the panel up or down, enlarging icons and text proportionally. The scale is preserved while the game session is active and resets to default on game restart.
+
+### Added
+
+#### Greedy Trait Effects
+- Parafolk with the **Greedy** trait gain **+1 Happy** when household money is ≥ 10 000 — wealth brings genuine satisfaction.
+- Parafolk with the **Greedy** trait suffer **+1 Stressed** when household money drops below 1 000 — financial panic sets in.
+- Parafolk with the **Greedy** trait get a **+25% job bonus** when Happy is their dominant emotion (money-driven peak performance).
+- Parafolk with the **Greedy** trait suffer a **+30% amplified job penalty** when Stressed is dominant (financial anxiety cripples focus).
+
+#### Paranoid Trait Effects
+- Parafolk with the **Paranoid** trait always have **+1 Stressed**, even from zero — chronic baseline anxiety.
+- Parafolk with the **Paranoid** trait gain **+1 Stressed** during night hours (22:00–06:00) — things lurk in the dark.
+- Parafolk with the **Paranoid** trait have **−1 Stressed** when completely alone during daytime — their own space is the one safe place (net stress from trait = 0 when alone in daylight).
+- Parafolk with the **Paranoid** trait suffer a **+35% amplified job penalty** when Stressed is dominant.
+
+#### Perfectionist Trait Effects
+- Parafolk with the **Perfectionist** trait gain **+1 Inspired** whenever they are actively leveling any skill (constant drive for improvement).
+- Parafolk with the **Perfectionist** trait suffer **−1 Happy** while leveling a skill below level 5 — early incompetence is genuinely frustrating.
+- Parafolk with the **Perfectionist** trait gain **+25% skill XP** when the skill being practiced is already at level ≥ 8 — mastery accelerates mastery.
+- Parafolk with the **Perfectionist** trait get a **+20% job bonus** when Inspired is their dominant emotion.
+
+#### Couch Potato Trait Effects
+- Parafolk with the **Couch Potato** trait always have **+1 Bored**, even from zero — they're easily bored by default.
+- Parafolk with the **Couch Potato** trait gain **+1 Happy** while watching TV or napping (true couch bliss).
+- Parafolk with the **Couch Potato** trait have their **Fun need decay 30% slower** — passive entertainment satisfies them completely.
+- Parafolk with the **Couch Potato** trait suffer a **+30% amplified job performance penalty** when Bored is their dominant emotion — they genuinely cannot focus.
+
+#### Slob Trait Effects
+- Parafolk with the **Slob** trait gain **+1 Amused** when near dirty or messy fixtures (right at home in filth).
+- Parafolk with the **Slob** trait have **-1 Uncomfortable** when near dirty fixtures (immune to the discomfort others feel).
+- Parafolk with the **Slob** trait suffer **-1 Happy** while doing household chores (genuinely resent being made to clean).
+
+#### Hyperactive Trait Effects
+- Parafolk with the **Hyperactive** trait always have **+1 Amused**, even from zero — perpetually buzzing with energy.
+- Parafolk with the **Hyperactive** trait gain **+1 Stressed** when their Fun need is at warning level — they can't handle inactivity.
+- Parafolk with the **Hyperactive** trait have their **Fun need decay 35% faster** — they burn through entertainment and constantly crave new stimulation.
+- Parafolk with the **Hyperactive** trait have their **Sleep need decay 30% slower** — naturally energetic, they need less rest to function.
+
+
+
+#### Over-Emotional Trait Effects
+- Parafolk with the **Over-Emotional** trait gain **+1 to every active emotion** — all moods are felt more intensely, positive and negative alike.
+- Parafolk with the **Over-Emotional** trait have their **job performance amplified by 25% in both directions** — strong moods push harder at work.
+
+#### Coward Trait Effects
+- Parafolk with the **Coward** trait always have **+1 Embarrassed** (timid by nature, even from zero).
+- Parafolk with the **Coward** trait gain **+2 Stressed** when a visibly angry Parafolk (organic Angry > 0, or Hot-Headed) is in the same zone.
+- Parafolk with the **Coward** trait suffer a **50% amplified job performance penalty** when Stressed is their dominant emotion.
+
+#### Dramatic Trait Effects
+- Parafolk with the **Dramatic** trait gain **+1 to their dominant emotion**, whatever it currently is — they always double down on their prevailing mood.
+- Parafolk with the **Dramatic** trait have their **job performance amplified by 30% in both directions** — mood-driven swings at work are more extreme.
+
+#### Brave Trait Effects
+- Parafolk with the **Brave** trait have **-1 Stressed** while Stressed is active (stress does not take hold).
+- Parafolk with the **Brave** trait gain **+1 Happy** when a visibly angry or Hot-Headed Parafolk is in the same zone (energized by conflict).
+- Parafolk with the **Brave** trait have their **job performance penalty converted to a bonus** when Stressed is their dominant emotion — they thrive under pressure.
+
+#### Mean Spirited Trait Effects
+- Parafolk with the **Mean Spirited** trait always have **+1 Angry**, even from zero (hostile baseline).
+- Parafolk with the **Mean Spirited** trait gain **+1 Happy** when any nearby Parafolk has a negative dominant emotion (broad schadenfreude).
+- Parafolk with the **Mean Spirited** trait have all **mood-based job performance penalties halved** — negativity barely slows them down.
+
+#### Absent-Minded Trait Effects
+- Parafolk with the **Absent-Minded** trait have **-1 Inspired** while Inspired is active (thoughts scatter before inspiration can be channelled).
+- Parafolk with the **Absent-Minded** trait always have **+1 Amused**, even from zero (mildly entertained by their own wandering mind).
+- Parafolk with the **Absent-Minded** trait suffer a **-15% job performance penalty** when Inspired is their dominant emotion — the spark leads to daydreaming, not productivity.
+
+---
+
+## [1.1.6]
 
 ### Added
 
