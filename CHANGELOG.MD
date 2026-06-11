@@ -2,7 +2,27 @@
 
 All notable changes to this project will be documented in this file.
 
-## [1.1.4] - Latest
+## [1.1.5] - Latest
+
+### Added
+
+#### Hot-Headed Trait Effects
+- Parafolk with the **Hot-Headed** trait always have **+2 Angry**, even from zero.
+- Parafolk in the same zone as a **Hot-Headed** Parafolk gain **+1 Angry** (rage contagion).
+- Parafolk with the **Hot-Headed** trait suffer **double job performance penalty** when Angry is their dominant emotion.
+
+#### Self-Assured Trait Effects
+- Parafolk with the **Self-Assured** trait have **-1 Stressed** while Stressed is active.
+- Parafolk with the **Self-Assured** trait have **-1 Embarrassed** while Embarrassed is active.
+- Parafolk with the **Self-Assured** trait suffer **half the job performance penalty** when their mood is negative.
+
+#### Loyal Trait Effects
+- Parafolk with the **Loyal** trait gain **+1 Happy** while their romantic partner is in the same zone.
+- Parafolk with the **Loyal** trait in a romantic relationship gain a **+30% job performance bonus** when their mood is positive.
+
+---
+
+## [1.1.4]
 
 ### Added
 
