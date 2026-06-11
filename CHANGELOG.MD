@@ -2,7 +2,33 @@
 
 All notable changes to this project will be documented in this file.
 
-## [1.1.2] - Latest
+## [1.1.3] - Latest
+
+### Added
+
+#### Custom Traits Support
+- Entries in `custom_traits.json` with the same ID as a built-in trait now take full priority, replacing the base definition.
+- Base traits can be disabled from `custom_traits.json` by redeclaring the same ID with `"enabled": false`.
+
+#### Crybaby Trait Effects
+- Parafolk with the **Crybaby** trait gain **+2 Sad** while the emotion is active.
+- Parafolk with the **Crybaby** trait gain **+1 Sad** when nearby Parafolk have a negative dominant emotion.
+
+#### Easily Bored Trait Effects
+- Parafolk with the **Easily Bored** trait gain **+2 Bored** while the emotion is active.
+- Parafolk with the **Easily Bored** trait suffer increased **Bored** buildup over time.
+
+#### Hates Computers Trait Effects
+- Parafolk with the **Hates Computers** trait gain **+2 Angry** when using computer-related interactions.
+- Parafolk with the **Hates Computers** trait gain **+1 Uncomfortable** while near a computer.
+
+#### Hates Reading Trait Effects
+- Parafolk with the **Hates Reading** trait gain **+2 Bored** when performing reading interactions.
+- Parafolk with the **Hates Reading** trait gain **+1 Uncomfortable** while near books or bookshelves.
+
+---
+
+## [1.1.2]
 
 ### Added
 
