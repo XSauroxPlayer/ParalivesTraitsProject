@@ -2,7 +2,27 @@
 
 All notable changes to this project will be documented in this file.
 
-## [1.1.5] - Latest
+## [1.1.6] - Latest
+
+### Added
+
+#### Outgoing Trait Effects
+- Parafolk with the **Outgoing** trait gain **+1 Happy** while at least one other Parafolk is in the same zone.
+- Parafolk with the **Outgoing** trait gain **+1 Stressed** when completely alone.
+
+#### Dastardly Trait Effects
+- Parafolk with the **Dastardly** trait always have **+1 Amused** (perpetually mischievous).
+- Parafolk with the **Dastardly** trait gain **+1 Happy** when organically angry (thrive on being mean).
+- Parafolk with the **Dastardly** trait gain a **+20% job performance bonus** when Angry is their dominant emotion.
+
+#### Clumsy Trait Effects
+- Parafolk with the **Clumsy** trait gain **+1 Amused** when Embarrassed is active (laugh at their own failures).
+- Parafolk with the **Clumsy** trait have **-1 Embarrassed** while Embarrassed is active (not bothered by failure).
+- Parafolk with the **Clumsy** trait suffer a **-15% job performance penalty** when their mood is positive (mishaps even in good times).
+
+---
+
+## [1.1.5]
 
 ### Added
 
