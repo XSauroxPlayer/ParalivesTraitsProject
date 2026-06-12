@@ -2,6 +2,82 @@
 
 All notable changes to this project will be documented in this file.
 
+## [1.2.0] - Latest
+
+### Added
+
+#### Commitment Issues Trait Effects
+- Parafolk with the **Commitment Issues** trait gain **+1 Uncomfortable** when their romantic partner is in the same zone — proximity triggers the urge to flee.
+- Parafolk with the **Commitment Issues** trait suffer **+1 Stressed** whenever they are in a romantic relationship (background anxiety at all times).
+- Parafolk with the **Commitment Issues** trait receive a **+15% job bonus when single** (freedom is energizing) and a **−15% penalty when in a relationship** (commitment anxiety cripples focus).
+
+#### Diva Trait Effects
+- Every active emotion is amplified for **Diva** Parafolk: **+1 when positive, +1 when negative** — the spotlight magnifies both the highs and the lows.
+- **Diva** Parafolk have their **job performance amplified ±20% in both directions** — mood swings hit harder at work.
+
+#### Easy Going Trait Effects
+- Parafolk with the **Easy Going** trait gain **+1 Happy** when not at work (thriving in leisure).
+- Parafolk with the **Easy Going** trait have **−1 Stressed** while Stressed is active (nothing really gets to them).
+- Parafolk with the **Easy Going** trait suffer **+1 Bored** when at work (resent being made to do things).
+- Parafolk with the **Easy Going** trait always perform at **×0.80 job efficiency** — they do just enough.
+
+#### Heavy Sleeper Trait Effects
+- Parafolk with the **Heavy Sleeper** trait gain **+1 Happy** while sleeping (blissfully deep sleep).
+- Parafolk with the **Heavy Sleeper** trait suffer **+1 Stressed** when their Sleep need is critical (cannot function without rest).
+- Parafolk with the **Heavy Sleeper** trait have **+1 Bored** during morning hours (06:00–09:00) when not sleeping (groggy and grumpy after waking).
+- **Heavy Sleepers** restore **Sleep ×2 faster** while sleeping (deep, efficient sleep).
+- **Heavy Sleepers** have their Sleep need decay **×1.3 faster** when awake (they need more sleep than average).
+
+#### Night Owl Trait Effects
+- Parafolk with the **Night Owl** trait gain **+1 Inspired** at night (20:00–06:00) — nocturnal creativity peaks after dark.
+- Parafolk with the **Night Owl** trait suffer **+1 Bored** in the afternoon (12:00–18:00) — the daytime slump is real.
+- **Night Owls** have their Sleep need decay **×0.7 at night** (naturally awake) and **×1.4 during the day** (fighting daylight drowsiness).
+- **Night Owls** gain **+25% skill XP** during nighttime hours — nocturnal focus sharpens learning.
+- **Night Owls** receive a **×1.3 job performance bonus** when Inspired is their dominant emotion.
+
+#### Rebellious Trait Effects
+- Parafolk with the **Rebellious** trait gain **+1 Amused** when not at work (enjoying freedom from authority).
+- Parafolk with the **Rebellious** trait suffer **+1 Uncomfortable** when at work (resents the system).
+- **Rebellious** Parafolk always perform at **×0.75 job efficiency** (anti-establishment baseline), but receive an **additional ×1.6 multiplier when Angry is dominant** (spite as fuel — net ×1.2).
+
+#### Seldom Sleepy Trait Effects
+- Parafolk with the **Seldom Sleepy** trait always have **+1 Inspired**, even from zero — perpetual mental clarity from needing less sleep.
+- Parafolk with the **Seldom Sleepy** trait suffer **+1 Bored** while sleeping (finds rest a wasteful chore).
+- **Seldom Sleepy** Parafolk have their Sleep need decay at **×0.5** — they barely get tired.
+- **Seldom Sleepy** Parafolk receive a **×1.2 job performance bonus** when Inspired is their dominant emotion.
+
+### Added
+- Clicking the **Randomize** button in the Personality section of the Paramaker now also randomizes the character's mod traits, respecting the per-life-stage trait limit from the mod config.
+
+### Fixed
+- **Diva + Commitment Issues** (and similar trait combos): Diva now correctly amplifies emotions that are raised from zero by another trait. The patch uses the same re-entrancy guard + fast/slow path pattern already in use for Grumpy and Easy Going.
+
+### Changed
+
+#### Cheerful Trait Rework
+- Emotion patches now target `GetEmotionValueForUI` (amplifier model visible in the UI breakdown) instead of `GetEmotionValue`.
+- Added **×1.15 job performance bonus** when Happy is the dominant emotion (money-driven peak performance from genuine happiness).
+
+#### Gloomy Trait Rework
+- Emotion patches now target `GetEmotionValueForUI`.
+- Added the **Tortured Artist** effect: Parafolk with the **Gloomy** trait gain **+1 Inspired** whenever they are organically Sad — melancholy channels into creativity.
+- Added **×1.3 job performance bonus** when Inspired is the dominant emotion (melancholy fuels creative output).
+
+#### Grumpy Trait Rework
+- Emotion patches now target `GetEmotionValueForUI`.
+- **Grumpy** Parafolk now always have **+1 Angry**, even from zero — perpetually irritable baseline.
+- Added **×1.2 job performance bonus** when Angry is the dominant emotion (bitter determination).
+
+---
+
+## [1.1.8]
+
+### Changed
+- Disabled duplicated entry for great kisser trait.
+- Fixed various issues with the UI, now building correctly also in the Paramaker
+
+---
+
 ## [1.1.7] - Latest
 
 ### Changed
