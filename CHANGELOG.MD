@@ -2,7 +2,18 @@
 
 All notable changes to this project will be documented in this file.
 
-## [1.2.0] - Latest
+## [1.2.1] - Latest
+
+### Added
+
+### Performance
+- Trait checks are now instant regardless of how many traits a character has — no more scanning the full list on every frame for every emotion.
+- Characters with no mod traits no longer cause unnecessary work on every check.
+- Heavy Sleeper and Seldom Sleepy no longer re-evaluate sleeping state every single frame — the result is cached for half a second.
+
+---
+
+## [1.2.0]
 
 ### Added
 
